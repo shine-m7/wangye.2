@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>肌肉生长肽 - 产品系列2</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f5f5f5;
+      }
+
+      /* 顶部导航横条 */
+      .navbar {
+        background-color: #fff;
+        color: #333;
+        padding: 12px 20px;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .navbar-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+      }
+
+      .navbar-brand {
+        font-size: 20px;
+        font-weight: 600;
+        color: #333;
+        text-decoration: none;
+      }
+
+      .navbar-menu {
+        display: flex;
+        list-style: none;
+        gap: 10px;
+      }
+
+      .nav-item {
+        position: relative;
+      }
+
+      .nav-link {
+        color: #333;
+        text-decoration: none;
+        padding: 8px 16px;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+      }
+
+      .nav-link:hover {
+        background-color: #f0f0f0;
+      }
+
+      .dropdown {
+        position: relative;
+      }
+
+      .dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #fff;
+        min-width: 160px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+      }
+
+      .dropdown:hover .dropdown-menu {
+        display: block;
+      }
+
+      .dropdown-item {
+        display: block;
+        padding: 10px 16px;
+        color: #333;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+      }
+
+      .dropdown-item:hover {
+        background-color: #f0f0f0;
+      }
+
+      /* 第一窗口 - 主图片展示 */
+      .hero-section {
+        width: 100%;
+        background-color: #fff;
+        padding: 40px 20px;
+      }
+
+      .hero-image {
+        width: 100%;
+        max-width: 1200px;
+        height: 400px;
+        object-fit: cover;
+        border-radius: 12px;
+        display: block;
+        margin: 0 auto;
+      }
+
+      /* 第二窗口 - 卡片区域 */
+      .cards-section {
+        width: 100%;
+        padding: 40px 20px;
+        background-color: #f5f5f5;
+      }
+
+      .cards-title {
+        text-align: center;
+        font-size: 24px;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 30px;
+      }
+
+      .cards-container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .cards-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+
+      .card {
+        background-color: #007bff;
+        border-radius: 12px;
+        overflow: hidden;
+        color: #fff;
+      }
+
+      .card-image {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+      }
+
+      .card-content {
+        padding: 16px;
+      }
+
+      .card-text {
+        font-size: 14px;
+        line-height: 1.5;
+        opacity: 0.9;
+      }
+
+      /* 分页按钮 */
+      .pagination {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 30px;
+      }
+
+      .page-btn {
+        padding: 10px 24px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+      }
+
+      .page-btn:hover {
+        background-color: #0056b3;
+      }
+
+      .page-btn.active {
+        background-color: #0056b3;
+      }
+
+      /* 第三窗口 - 联系方式 */
+      .contact-section {
+        width: 100%;
+        background-color: #000;
+        color: #fff;
+        padding: 60px 20px;
+        text-align: center;
+      }
+
+      .contact-title {
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 30px;
+      }
+
+      .contact-info {
+        max-width: 800px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
+      }
+
+      .contact-item {
+        text-align: center;
+      }
+
+      .contact-item h4 {
+        font-size: 16px;
+        margin-bottom: 8px;
+        opacity: 0.8;
+      }
+
+      .contact-item p {
+        font-size: 18px;
+        font-weight: 500;
+      }
+
+      @media (max-width: 1000px) {
+        .cards-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 600px) {
+        .cards-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .hero-image {
+          height: 250px;
+        }
+
+        .contact-info {
+          flex-direction: column;
+          gap: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 顶部导航横条 -->
+    <nav class="navbar">
+      <div class="navbar-container">
+        <ul class="navbar-menu">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">首页</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link">产品中心</a>
+            <div class="dropdown-menu">
+              <a href="muscle-growth.html" class="dropdown-item">产品系列1</a>
+              <a href="muscle-growth2.html" class="dropdown-item">产品系列2</a>
+              <a href="muscle-growth3.html" class="dropdown-item">产品系列3</a>
+              <a href="muscle-growth4.html" class="dropdown-item">产品系列4</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="hero-section">
+      <img
+        src="img/t016ee5515d73ac7736.jpg"
+        alt="肌肉生长肽产品2"
+        class="hero-image"
+      />
+    </section>
+
+    <section class="cards-section">
+      <h2 class="cards-title">产品系列2详情</h2>
+      <div class="cards-container">
+        <div class="cards-grid" id="page1">
+          <div class="card">
+            <img
+              src="img/t0159159fa5989d5681.jpg"
+              alt="产品A"
+              class="card-image"
+            />
+            <div class="card-content">
+              <p class="card-text">
+                第二代肌肉生长肽，采用全新配方，效果更显著，安全性更高。
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="img/t013b9fa89b10e700f0.jpg"
+              alt="产品B"
+              class="card-image"
+            />
+            <div class="card-content">
+              <p class="card-text">
+                专为专业运动员设计，提升爆发力和耐力，突破训练瓶颈。
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="img/t0110c6747152031ade.jpg"
+              alt="产品C"
+              class="card-image"
+            />
+            <div class="card-content">
+              <p class="card-text">
+                快速吸收技术，让营养更快到达肌肉，加速生长过程。
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="img/6.jpg" alt="产品D" class="card-image" />
+            <div class="card-content">
+              <p class="card-text">
+                科学配比多种氨基酸，全面支持肌肉生长和恢复。
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="img/5.jpg" alt="产品E" class="card-image" />
+            <div class="card-content">
+              <p class="card-text">增强免疫系统，减少训练期间的感染风险。</p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="img/3.jpg" alt="产品F" class="card-image" />
+            <div class="card-content">
+              <p class="card-text">
+                优化脂肪代谢，帮助塑造完美体型，减少体脂比例。
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="img/1.jpg" alt="产品G" class="card-image" />
+            <div class="card-content">
+              <p class="card-text">
+                提升睡眠质量，促进夜间肌肉修复和生长激素分泌。
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="img/4.jpg" alt="产品H" class="card-image" />
+            <div class="card-content">
+              <p class="card-text">
+                增强骨骼密度，预防运动损伤，保护关节健康。
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="cards-grid" id="page2" style="display: none">
+          <div class="card">
+            <img
+              src="img/t04d141211db1ce0d93.jpg"
+              alt="预留卡片1"
+              class="card-image"
+            />
+            <div class="card-content">
+              <p class="card-text">预留模块 - 更多产品信息即将上线</p>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="img/t04b908de55dddead3c.jpg"
+              alt="预留卡片2"
+              class="card-image"
+            />
+            <div class="card-content">
+              <p class="card-text">预留模块 - 更多产品信息即将上线</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pagination">
+        <button class="page-btn active" onclick="showPage(1)">第1页</button>
+        <button class="page-btn" onclick="showPage(2)">第2页</button>
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <h2 class="contact-title">联系我们</h2>
+      <div class="contact-info">
+        <div class="contact-item">
+          <h4>电话</h4>
+          <p>400-888-8888</p>
+        </div>
+        <div class="contact-item">
+          <h4>邮箱</h4>
+          <p>contact@example.com</p>
+        </div>
+        <div class="contact-item">
+          <h4>地址</h4>
+          <p>北京市朝阳区xxx路xxx号</p>
+        </div>
+        <div class="contact-item">
+          <h4>营业时间</h4>
+          <p>周一至周五 9:00-18:00</p>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function showPage(pageNum) {
+        document.getElementById("page1").style.display = "none";
+        document.getElementById("page2").style.display = "none";
+        document.getElementById("page" + pageNum).style.display = "grid";
+
+        const buttons = document.querySelectorAll(".page-btn");
+        buttons.forEach((btn, index) => {
+          btn.classList.toggle("active", index + 1 === pageNum);
+        });
+      }
+    </script>
+  </body>
+</html>
