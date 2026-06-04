@@ -128,8 +128,9 @@
 
       .hero-image {
         width: 100%;
-        height: 400px;
-        object-fit: cover;
+        height: auto;
+        max-height: 500px;
+        object-fit: contain;
         flex-shrink: 0;
       }
 
@@ -229,8 +230,9 @@
 
       .card-image {
         width: 100%;
-        height: 180px;
-        object-fit: cover;
+        height: auto;
+        max-height: 250px;
+        object-fit: contain;
       }
 
       .card-content {
@@ -286,10 +288,13 @@
       .friendship-card {
         width: calc(25% - 15px);
         min-width: 200px;
-        height: 200px;
+        height: auto;
+        max-height: 250px;
         border-radius: 12px;
-        background-size: cover;
+        background-size: contain;
+        background-repeat: no-repeat;
         background-position: center;
+        background-color: #f0f0f0;
         display: flex;
         align-items: flex-end;
         padding: 16px;
@@ -426,26 +431,10 @@
         </button>
 
         <div class="hero-images">
-          <img
-            src="img/t04d141211db1ce0d93.jpg"
-            alt="风景图片1"
-            class="hero-image"
-          />
-          <img
-            src="img/t04b908de55dddead3c.jpg"
-            alt="风景图片2"
-            class="hero-image"
-          />
-          <img
-            src="img/t04aa198c1969b27167.jpg"
-            alt="风景图片3"
-            class="hero-image"
-          />
-          <img
-            src="img/t03a9467fa77b566803.jpg"
-            alt="风景图片4"
-            class="hero-image"
-          />
+          <img src="img/环境1.jpg" alt="风景图片1" class="hero-image" />
+          <img src="img/环境2.jpg" alt="风景图片2" class="hero-image" />
+          <img src="img/环境3.jpg" alt="风景图片3" class="hero-image" />
+          <img src="img/待定" alt="风景图片4" class="hero-image" />
         </div>
 
         <!-- 右切换按钮 -->
@@ -472,11 +461,7 @@
       <div class="cards-grid">
         <!-- 第一排：3个卡片 -->
         <div class="card">
-          <img
-            src="img/t01fba472021559ff33.jpg"
-            alt="卡片图片1"
-            class="card-image"
-          />
+          <img src="img/样品1.jpg" alt="卡片图片1" class="card-image" />
           <div class="card-content">
             <h3 class="card-title">科技创新</h3>
             <a href="muscle-growth.html" class="card-button">肌肉生长肽</a>
@@ -484,11 +469,7 @@
         </div>
 
         <div class="card">
-          <img
-            src="img/t01e984601faff6d736.jpg"
-            alt="卡片图片2"
-            class="card-image"
-          />
+          <img src="img/样品2.jpg" alt="卡片图片2" class="card-image" />
           <div class="card-content">
             <h3 class="card-title">商业洞察</h3>
             <a href="muscle-growth2.html" class="card-button">减肥与控制肽</a>
@@ -496,7 +477,7 @@
         </div>
 
         <div class="card">
-          <img src="img/10.jpg" alt="卡片图片3" class="card-image" />
+          <img src="img/样品3.jpg" alt="卡片图片3" class="card-image" />
           <div class="card-content">
             <h3 class="card-title">创意设计</h3>
             <a href="muscle-growth3.html" class="card-button">生物调节肽</a>
@@ -505,11 +486,7 @@
 
         <!-- 第二排：2个卡片 -->
         <div class="card">
-          <img
-            src="img/t01c48e3ab9b32c15a4.jpg"
-            alt="卡片图片4"
-            class="card-image"
-          />
+          <img src="img/样品4.jpg" alt="卡片图片4" class="card-image" />
           <div class="card-content">
             <h3 class="card-title">教育培训</h3>
             <a href="muscle-growth4.html" class="card-button">神经营养肽</a>
