@@ -63,6 +63,7 @@
 
       .nav-link:hover {
         background-color: #f0f0f0;
+        transform: translateY(-2px);
       }
 
       /* 下拉菜单 */
@@ -110,6 +111,38 @@
         font-weight: 600;
         color: #333;
         margin-bottom: 20px;
+        opacity: 0;
+      }
+
+      .hero-title.animate {
+        animation: fadeInUp 1s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+      }
+
+      .card-title {
+        font-size: 18px;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 12px;
+      }
+
+      .card-text {
+        font-size: 15px;
+        line-height: 1.6;
+        color: #666;
+      }
+
+      .read-more {
+        display: inline-block;
+        margin-top: 12px;
+        color: #007bff;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+
+      .read-more:hover {
+        color: #0056b3;
       }
 
       .hero-scroll-container {
@@ -119,6 +152,7 @@
         overflow: hidden;
         border-radius: 8px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        position: relative;
       }
 
       .hero-images {
@@ -156,11 +190,11 @@
       }
 
       .carousel-btn-prev {
-        left: 10px;
+        left: 15px;
       }
 
       .carousel-btn-next {
-        right: 10px;
+        right: 15px;
       }
 
       /* 轮播指示器 */
@@ -200,6 +234,11 @@
         font-weight: 600;
         color: #333;
         margin-bottom: 30px;
+        opacity: 0;
+      }
+
+      .cards-title.animate {
+        animation: fadeInUp 1s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
       }
 
       .cards-grid {
@@ -221,6 +260,28 @@
         transition:
           transform 0.3s ease,
           box-shadow 0.3s ease;
+        opacity: 0;
+      }
+
+      .card.animate {
+        animation: slideInFromBottom 0.8s cubic-bezier(0.34, 1.56, 0.64, 1)
+          forwards;
+      }
+
+      .card:nth-child(1).animate {
+        animation-delay: 0.1s;
+      }
+      .card:nth-child(2).animate {
+        animation-delay: 0.25s;
+      }
+      .card:nth-child(3).animate {
+        animation-delay: 0.4s;
+      }
+      .card:nth-child(4).animate {
+        animation-delay: 0.55s;
+      }
+      .card:nth-child(5).animate {
+        animation-delay: 0.7s;
       }
 
       .card:hover {
@@ -239,13 +300,6 @@
         padding: 16px;
       }
 
-      .card-title {
-        font-size: 16px;
-        font-weight: 600;
-        color: #333;
-        margin-bottom: 12px;
-      }
-
       .card-button {
         display: inline-block;
         padding: 8px 20px;
@@ -261,6 +315,143 @@
         background-color: #0056b3;
       }
 
+      /* 流行动画效果 */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(40px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes slideInFromLeft {
+        from {
+          opacity: 0;
+          transform: translateX(-60px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes slideInFromRight {
+        from {
+          opacity: 0;
+          transform: translateX(60px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes slideInFromBottom {
+        from {
+          opacity: 0;
+          transform: translateY(80px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes scaleIn {
+        from {
+          opacity: 0;
+          transform: scale(0.9);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      @keyframes bounce {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+
+      @keyframes pulse {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+      }
+
+      @keyframes shake {
+        0%,
+        100% {
+          transform: translateX(0);
+        }
+        10%,
+        30%,
+        50%,
+        70%,
+        90% {
+          transform: translateX(-5px);
+        }
+        20%,
+        40%,
+        60%,
+        80% {
+          transform: translateX(5px);
+        }
+      }
+
+      .animate-fadeIn {
+        animation: fadeIn 0.8s ease-out forwards;
+      }
+
+      .animate-slideLeft {
+        animation: slideInFromLeft 0.6s ease-out forwards;
+      }
+
+      .animate-slideRight {
+        animation: slideInFromRight 0.6s ease-out forwards;
+      }
+
+      .animate-slideBottom {
+        animation: slideInFromBottom 0.6s ease-out forwards;
+      }
+
+      .animate-scale {
+        animation: scaleIn 0.5s ease-out forwards;
+      }
+
+      .animate-bounce {
+        animation: bounce 1s ease-in-out infinite;
+      }
+
+      .animate-pulse {
+        animation: pulse 2s ease-in-out infinite;
+      }
+
+      .animate-shake:hover {
+        animation: shake 0.5s ease-in-out;
+      }
+
       /* 友谊展示区域 */
       .friendship-section {
         width: 100%;
@@ -274,6 +465,11 @@
         font-weight: 600;
         color: #333;
         margin-bottom: 30px;
+        opacity: 0;
+      }
+
+      .friendship-title.animate {
+        animation: fadeIn 0.8s ease-out forwards;
       }
 
       .friendship-cards {
@@ -291,36 +487,54 @@
         height: auto;
         max-height: 250px;
         border-radius: 12px;
-        background-size: contain;
+        background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-        background-color: #f0f0f0;
         display: flex;
         align-items: flex-end;
         padding: 16px;
         color: #fff;
         text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-        transition: transform 0.3s ease;
+        transition: all 0.3s ease;
+        opacity: 0;
+      }
+
+      .friendship-card.animate {
+        animation: scaleIn 0.5s ease-out forwards;
+      }
+
+      .friendship-card:nth-child(1).animate {
+        animation-delay: 0.1s;
+      }
+      .friendship-card:nth-child(2).animate {
+        animation-delay: 0.2s;
+      }
+      .friendship-card:nth-child(3).animate {
+        animation-delay: 0.3s;
+      }
+      .friendship-card:nth-child(4).animate {
+        animation-delay: 0.4s;
       }
 
       .friendship-card:hover {
-        transform: scale(1.05);
+        transform: scale(1.08);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
       }
-
+      /* 一下为评论区的图片模组，弧度边框 */
       .friendship-card:nth-child(1) {
         background-image: url("img/8.jpg");
         order: 3;
       }
       .friendship-card:nth-child(2) {
-        background-image: url("img/7.jpg");
+        background-image: url("img/环境1.jpg");
         order: 1;
       }
       .friendship-card:nth-child(3) {
-        background-image: url("img/t016ee5515d73ac7736.jpg");
+        background-image: url("img/评论.jpg");
         order: 4;
       }
       .friendship-card:nth-child(4) {
-        background-image: url("img/t0159159fa5989d5681.jpg");
+        background-image: url("img/评论1.jpg");
         order: 2;
       }
 
@@ -331,6 +545,11 @@
         color: #666;
         font-size: 16px;
         line-height: 1.6;
+        opacity: 0;
+      }
+
+      .friendship-desc.animate {
+        animation: fadeIn 1s ease-out 0.5s both;
       }
 
       /* 第三窗口 - 联系方式区域 */
@@ -346,6 +565,11 @@
         font-size: 24px;
         font-weight: 600;
         margin-bottom: 30px;
+        opacity: 0;
+      }
+
+      .contact-title.animate {
+        animation: fadeIn 0.8s ease-out forwards;
       }
 
       .contact-info {
@@ -362,14 +586,93 @@
       }
 
       .contact-item h4 {
-        font-size: 16px;
-        margin-bottom: 8px;
-        opacity: 0.8;
+        font-size: 18px;
+        margin-bottom: 10px;
+        opacity: 0.9;
       }
 
       .contact-item p {
         font-size: 18px;
         font-weight: 500;
+      }
+
+      /* 查看更多按钮 */
+      .view-more-btn {
+        display: inline-block;
+        margin-top: 30px;
+        padding: 12px 30px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+      }
+
+      .view-more-btn:hover {
+        background-color: #0056b3;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(0, 123, 255, 0.4);
+      }
+
+      /* 弹窗样式 */
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(5px);
+        animation: fadeIn 0.3s ease;
+      }
+
+      .modal-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.8);
+        max-width: 90%;
+        max-height: 90%;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+      }
+
+      .modal.show .modal-content {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+      }
+
+      .modal-content img {
+        display: block;
+        max-width: 100%;
+        max-height: 90vh;
+        object-fit: contain;
+      }
+
+      .modal-close {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        color: #fff;
+        font-size: 40px;
+        font-weight: bold;
+        cursor: pointer;
+        z-index: 1001;
+        transition: color 0.3s ease;
+        line-height: 1;
+      }
+
+      .modal-close:hover {
+        color: #ff4444;
       }
 
       /* 响应式设计 */
@@ -412,6 +715,7 @@
               <a href="muscle-growth2.html" class="dropdown-item">产品系列2</a>
               <a href="muscle-growth3.html" class="dropdown-item">产品系列3</a>
               <a href="muscle-growth4.html" class="dropdown-item">产品系列4</a>
+              <a href="muscle-growth5.html" class="dropdown-item">产品系列5</a>
             </div>
           </li>
         </ul>
@@ -505,11 +809,13 @@
       </div>
     </section>
 
-    <!-- 友谊展示区域 -->
+    <!-- 评论展示区域 -->
     <section class="friendship-section">
       <h2 class="friendship-title">评论展示</h2>
       <div class="friendship-cards">
-        <div class="friendship-card"></div>
+        <div class="friendship-card">
+          <img src="img/评论1.jpg" alt="评论1" class="card-image" />
+        </div>
         <div class="friendship-card"></div>
         <div class="friendship-card"></div>
         <div class="friendship-card"></div>
@@ -540,7 +846,18 @@
           <p>周一至周五 9:00-18:00</p>
         </div>
       </div>
+      <button class="view-more-btn" onclick="openModal()">
+        联系我们获取报价
+      </button>
     </section>
+
+    <!-- 弹窗 -->
+    <div class="modal" id="imageModal">
+      <span class="modal-close" onclick="closeModal()">&times;</span>
+      <div class="modal-content">
+        <img src="img/wx.png" alt="联系我们获取报价" />
+      </div>
+    </div>
 
     <script>
       // 开屏图片自动轮播
@@ -580,6 +897,66 @@
 
       // 自动轮播
       timer = setInterval(slideNext, slideInterval);
+
+      // Intersection Observer - 动作监视器，当元素进入视口时触发动画
+      const observerOptions = {
+        root: null,
+        rootMargin: "0px 0px -10% 0px",
+        threshold: 0.1,
+      };
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // 添加 animate 类来触发动画
+            entry.target.classList.add("animate");
+            // 只触发一次
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      // 监听所有需要动画的元素
+      const animatedElements = document.querySelectorAll(
+        ".hero-title, .cards-title, .card, .friendship-title, .friendship-card, .friendship-desc, .contact-title",
+      );
+
+      animatedElements.forEach((element) => {
+        observer.observe(element);
+      });
+
+      // 弹窗功能
+      function openModal() {
+        const modal = document.getElementById("imageModal");
+        modal.style.display = "block";
+        // 触发重绘后添加show类
+        setTimeout(() => {
+          modal.classList.add("show");
+        }, 10);
+      }
+
+      function closeModal() {
+        const modal = document.getElementById("imageModal");
+        modal.classList.remove("show");
+        setTimeout(() => {
+          modal.style.display = "none";
+        }, 400);
+      }
+
+      // 点击弹窗背景关闭弹窗
+      window.onclick = function (event) {
+        const modal = document.getElementById("imageModal");
+        if (event.target === modal) {
+          closeModal();
+        }
+      };
+
+      // 按ESC键关闭弹窗
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+          closeModal();
+        }
+      });
     </script>
   </body>
 </html>
