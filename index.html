@@ -294,6 +294,7 @@
         height: auto;
         max-height: 250px;
         object-fit: contain;
+        border-radius: 12px;
       }
 
       .card-content {
@@ -520,23 +521,6 @@
         transform: scale(1.08);
         box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
       }
-      /* 一下为评论区的图片模组，弧度边框 */
-      .friendship-card:nth-child(1) {
-        background-image: url("img/8.jpg");
-        order: 3;
-      }
-      .friendship-card:nth-child(2) {
-        background-image: url("img/环境1.jpg");
-        order: 1;
-      }
-      .friendship-card:nth-child(3) {
-        background-image: url("img/评论.jpg");
-        order: 4;
-      }
-      .friendship-card:nth-child(4) {
-        background-image: url("img/评论1.jpg");
-        order: 2;
-      }
 
       .friendship-desc {
         max-width: 800px;
@@ -735,10 +719,10 @@
         </button>
 
         <div class="hero-images">
-          <img src="img/环境1.jpg" alt="风景图片1" class="hero-image" />
-          <img src="img/环境2.jpg" alt="风景图片2" class="hero-image" />
-          <img src="img/环境3.jpg" alt="风景图片3" class="hero-image" />
-          <img src="img/待定" alt="风景图片4" class="hero-image" />
+          <img src="img/环境/环境1.jpg" alt="风景图片1" class="hero-image" />
+          <img src="img/环境/环境2.jpg" alt="风景图片2" class="hero-image" />
+          <img src="img/环境/环境3.jpg" alt="风景图片3" class="hero-image" />
+          <img src="img/环境/环境4.jpg" alt="风景图片4" class="hero-image" />
         </div>
 
         <!-- 右切换按钮 -->
@@ -765,42 +749,58 @@
       <div class="cards-grid">
         <!-- 第一排：3个卡片 -->
         <div class="card">
-          <img src="img/样品1.jpg" alt="卡片图片1" class="card-image" />
+          <img
+            src="img/肌肉生长/微信图片_20260605092430_266_593.png"
+            alt="卡片图片1"
+            class="card-image"
+          />
           <div class="card-content">
-            <h3 class="card-title">科技创新</h3>
+            <h3 class="card-title">肌肉新型肽</h3>
             <a href="muscle-growth.html" class="card-button">肌肉生长肽</a>
           </div>
         </div>
 
         <div class="card">
-          <img src="img/样品2.jpg" alt="卡片图片2" class="card-image" />
+          <img
+            src="img/减肥和控制/cea41a6ca679c941e355b93fbd531859.jpg"
+            alt="卡片图片2"
+            class="card-image"
+          />
           <div class="card-content">
-            <h3 class="card-title">商业洞察</h3>
+            <h3 class="card-title">减肥就选我</h3>
             <a href="muscle-growth2.html" class="card-button">减肥与控制肽</a>
           </div>
         </div>
 
         <div class="card">
-          <img src="img/样品3.jpg" alt="卡片图片3" class="card-image" />
+          <img src="img/生物调节/1.jpg" alt="卡片图片3" class="card-image" />
           <div class="card-content">
-            <h3 class="card-title">创意设计</h3>
+            <h3 class="card-title">调节每刻</h3>
             <a href="muscle-growth3.html" class="card-button">生物调节肽</a>
           </div>
         </div>
 
         <!-- 第二排：2个卡片 -->
         <div class="card">
-          <img src="img/样品4.jpg" alt="卡片图片4" class="card-image" />
+          <img
+            src="img/神经营养/微信图片_20260605100432_297_593.jpg"
+            alt="卡片图片4"
+            class="card-image"
+          />
           <div class="card-content">
-            <h3 class="card-title">教育培训</h3>
+            <h3 class="card-title">神经调节肽</h3>
             <a href="muscle-growth4.html" class="card-button">神经营养肽</a>
           </div>
         </div>
 
         <div class="card">
-          <img src="img/9.jpg" alt="卡片图片5" class="card-image" />
+          <img
+            src="img/皮肤头发、指甲健康/微信图片_20260605101326_306_593.jpg"
+            alt="卡片图片5"
+            class="card-image"
+          />
           <div class="card-content">
-            <h3 class="card-title">旅行探索</h3>
+            <h3 class="card-title">外貌保养、美容</h3>
             <a href="muscle-growth5.html" class="card-button"
               >皮肤、头发、指甲保健肽</a
             >
@@ -814,11 +814,17 @@
       <h2 class="friendship-title">评论展示</h2>
       <div class="friendship-cards">
         <div class="friendship-card">
-          <img src="img/评论1.jpg" alt="评论1" class="card-image" />
+          <img src="img/评论/评论.jpg" alt="评论1" class="card-image" />
         </div>
-        <div class="friendship-card"></div>
-        <div class="friendship-card"></div>
-        <div class="friendship-card"></div>
+        <div class="friendship-card">
+          <img src="img/评论/评论1.jpg" alt="评论2" class="card-image" />
+        </div>
+        <div class="friendship-card">
+          <img src="img/评论/评论1.jpg" alt="评论3" class="card-image" />
+        </div>
+        <div class="friendship-card">
+          <img src="img/评论/评论.jpg" alt="评论4" class="card-image" />
+        </div>
       </div>
       <p class="friendship-desc">
         友谊是人生最珍贵的财富，它如同一盏明灯，照亮我们前行的道路。在这里，我们见证了无数真挚的友谊故事，每一段友谊都值得被铭记和珍惜。
