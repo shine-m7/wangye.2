@@ -106,8 +106,9 @@
       .hero-image {
         width: 100%;
         max-width: 1200px;
-        height: 400px;
-        object-fit: cover;
+        height: auto;
+        max-height: 400px;
+        object-fit: contain;
         border-radius: 12px;
         display: block;
         margin: 0 auto;
@@ -367,7 +368,7 @@
         }
 
         .hero-image {
-          height: 250px;
+          max-height: 250px;
         }
 
         .contact-info {
