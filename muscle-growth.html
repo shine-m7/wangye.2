@@ -219,21 +219,25 @@
 
       .page-btn {
         padding: 10px 24px;
-        background-color: #007bff;
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
         color: #fff;
-        border: none;
+        border: 1px solid rgba(255, 255, 255, 0.3);
         border-radius: 6px;
         cursor: pointer;
         font-size: 16px;
-        transition: background-color 0.3s ease;
+        transition: all 0.3s ease;
       }
 
       .page-btn:hover {
-        background-color: #0056b3;
+        background: rgba(255, 255, 255, 0.35);
+        border-color: rgba(255, 255, 255, 0.5);
       }
 
       .page-btn.active {
-        background-color: #0056b3;
+        background: rgba(255, 255, 255, 0.4);
+        border-color: rgba(255, 255, 255, 0.6);
       }
 
       /* 第三窗口 - 联系方式 */
