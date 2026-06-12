@@ -536,6 +536,103 @@
         animation: fadeIn 1s ease-out 0.5s both;
       }
 
+      /* 公司简介区域 */
+      .company-section {
+        width: 100%;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        padding: 60px 20px;
+        text-align: center;
+      }
+
+      .company-title {
+        font-size: 28px;
+        font-weight: 600;
+        color: #fff;
+        margin-bottom: 20px;
+        opacity: 0;
+      }
+
+      .company-title.animate {
+        animation: fadeIn 0.8s ease-out forwards;
+      }
+
+      .company-desc {
+        max-width: 1000px;
+        margin: 0 auto 40px;
+        font-size: 16px;
+        line-height: 1.8;
+        color: rgba(255, 255, 255, 0.9);
+        opacity: 0;
+      }
+
+      .company-desc.animate {
+        animation: fadeIn 1s ease-out 0.3s both;
+      }
+
+      .services-grid {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+      }
+
+      .service-card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 16px;
+        padding: 30px 20px;
+        text-align: left;
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+        opacity: 0;
+      }
+
+      .service-card.animate {
+        animation: slideInFromBottom 0.6s cubic-bezier(0.34, 1.56, 0.64, 1)
+          forwards;
+      }
+
+      .service-card:nth-child(1).animate {
+        animation-delay: 0.1s;
+      }
+      .service-card:nth-child(2).animate {
+        animation-delay: 0.2s;
+      }
+      .service-card:nth-child(3).animate {
+        animation-delay: 0.3s;
+      }
+      .service-card:nth-child(4).animate {
+        animation-delay: 0.4s;
+      }
+
+      .service-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+      }
+
+      .service-number {
+        font-size: 48px;
+        font-weight: 700;
+        color: rgba(255, 255, 255, 0.3);
+        line-height: 1;
+        margin-bottom: 15px;
+      }
+
+      .service-title {
+        font-size: 18px;
+        font-weight: 600;
+        color: #fff;
+        margin-bottom: 12px;
+      }
+
+      .service-desc {
+        font-size: 14px;
+        line-height: 1.6;
+        color: rgba(255, 255, 255, 0.85);
+      }
+
       /* 第三窗口 - 联系方式区域 */
       .contact-section {
         width: 100%;
@@ -695,11 +792,15 @@
           <li class="nav-item dropdown">
             <a href="#" class="nav-link">产品中心</a>
             <div class="dropdown-menu">
-              <a href="muscle-growth.html" class="dropdown-item">产品系列1</a>
-              <a href="muscle-growth2.html" class="dropdown-item">产品系列2</a>
-              <a href="muscle-growth3.html" class="dropdown-item">产品系列3</a>
-              <a href="muscle-growth4.html" class="dropdown-item">产品系列4</a>
-              <a href="muscle-growth5.html" class="dropdown-item">产品系列5</a>
+              <a href="muscle-growth.html" class="dropdown-item">肌肉生长肽</a>
+              <a href="muscle-growth2.html" class="dropdown-item"
+                >减肥与控制肽</a
+              >
+              <a href="muscle-growth3.html" class="dropdown-item">生物调节肽</a>
+              <a href="muscle-growth4.html" class="dropdown-item">神经营养肽</a>
+              <a href="muscle-growth5.html" class="dropdown-item"
+                >皮肤、头发、指甲肽</a
+              >
             </div>
           </li>
         </ul>
@@ -831,6 +932,45 @@
       </p>
     </section>
 
+    <!-- 公司简介区域 -->
+    <section class="company-section">
+      <h2 class="company-title">公司简介</h2>
+      <p class="company-desc">
+        我司哲鹤贸易是国内专注医药多肽、生物活性肽、美容胜肽研发、规模化生产与全球出口的高新技术企业，深耕多肽合成领域多年，集研发、生产、质检、外贸销售于一体，立足国内生物医药产业基地，面向全球市场供应高纯多肽原料与定制合成服务。
+      </p>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-number">01</div>
+          <h3 class="service-title">定制化生产</h3>
+          <p class="service-desc">
+            灵活满足您的配方需求，提供从标准肽到复杂生物分子的全系列定制服务。
+          </p>
+        </div>
+        <div class="service-card">
+          <div class="service-number">02</div>
+          <h3 class="service-title">全球物流</h3>
+          <p class="service-desc">
+            全程温控与快速配送，确保肽类产品在运输过程中的活性与稳定性。
+          </p>
+        </div>
+        <div class="service-card">
+          <div class="service-number">03</div>
+          <h3 class="service-title">专业售后</h3>
+          <p class="service-desc">
+            专属售后对接，采购对接 + 技术答疑一站式跟进服务。
+          </p>
+        </div>
+        <div class="service-card">
+          <div class="service-number">04</div>
+          <h3 class="service-title">权威检测</h3>
+          <p class="service-desc">
+            高纯度确保科研准确性，多种规格适应不同需求，严格遵守科研要求。
+          </p>
+        </div>
+      </div>
+    </section>
+
     <!-- 联系方式区域 -->
     <section class="contact-section">
       <h2 class="contact-title">联系我们</h2>
@@ -924,7 +1064,7 @@
 
       // 监听所有需要动画的元素
       const animatedElements = document.querySelectorAll(
-        ".hero-title, .cards-title, .card, .friendship-title, .friendship-card, .friendship-desc, .contact-title",
+        ".hero-title, .cards-title, .card, .friendship-title, .friendship-card, .friendship-desc, .company-title, .company-desc, .service-card, .contact-title",
       );
 
       animatedElements.forEach((element) => {
