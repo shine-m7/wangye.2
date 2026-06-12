@@ -59,15 +59,11 @@
         text-decoration: none;
         padding: 8px 16px;
         border-radius: 4px;
-        background: rgba(255, 255, 255, 0.5);
-        backdrop-filter: blur(5px);
-        -webkit-backdrop-filter: blur(5px);
-        border: 1px solid rgba(0, 0, 0, 0.1);
-        transition: all 0.3s ease;
+        transition: background-color 0.3s ease;
       }
 
       .nav-link:hover {
-        background: rgba(255, 255, 255, 0.7);
+        background-color: #f0f0f0;
         transform: translateY(-2px);
       }
 
@@ -178,23 +174,20 @@
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        background: rgba(255, 255, 255, 0.25);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
+        background-color: rgba(0, 0, 0, 0.5);
         color: white;
-        border: 1px solid rgba(255, 255, 255, 0.3);
+        border: none;
         width: 40px;
         height: 40px;
         border-radius: 50%;
         font-size: 20px;
         cursor: pointer;
         z-index: 10;
-        transition: all 0.3s ease;
+        transition: background-color 0.3s ease;
       }
 
       .carousel-btn:hover {
-        background: rgba(255, 255, 255, 0.4);
-        border-color: rgba(255, 255, 255, 0.5);
+        background-color: rgba(0, 0, 0, 0.7);
       }
 
       .carousel-btn-prev {
@@ -694,19 +687,22 @@
         display: inline-block;
         margin-top: 30px;
         padding: 12px 30px;
-        background-color: #007bff;
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
         color: #fff;
-        border: none;
+        border: 1px solid rgba(255, 255, 255, 0.3);
         border-radius: 8px;
         font-size: 16px;
         font-weight: 500;
         cursor: pointer;
         transition: all 0.3s ease;
-        box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       }
 
       .view-more-btn:hover {
-        background-color: #0056b3;
+        background: rgba(255, 255, 255, 0.35);
+        border-color: rgba(255, 255, 255, 0.5);
         transform: translateY(-2px);
         box-shadow: 0 6px 16px rgba(0, 123, 255, 0.4);
       }
@@ -933,15 +929,13 @@
           <img src="img/评论/评论1.jpg" alt="评论2" class="card-image" />
         </div>
         <div class="friendship-card">
-          <img src="img/评论/评论1.jpg" alt="评论3" class="card-image" />
+          <img src="img/评论/评论2.jpg" alt="评论3" class="card-image" />
         </div>
         <div class="friendship-card">
           <img src="img/评论/评论.jpg" alt="评论4" class="card-image" />
         </div>
       </div>
-      <p class="friendship-desc">
-        友谊是人生最珍贵的财富，它如同一盏明灯，照亮我们前行的道路。在这里，我们见证了无数真挚的友谊故事，每一段友谊都值得被铭记和珍惜。
-      </p>
+      <p class="friendship-desc"></p>
     </section>
 
     <!-- 公司简介区域 -->
