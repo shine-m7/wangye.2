@@ -508,6 +508,8 @@
         text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
         transition: all 0.3s ease;
         opacity: 0;
+        position: relative;
+        overflow: hidden;
       }
 
       .friendship-card.animate {
@@ -544,6 +546,40 @@
 
       .friendship-desc.animate {
         animation: fadeIn 1s ease-out 0.5s both;
+      }
+
+      /* 评论卡片内容样式 */
+      .friendship-card .card-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 12px;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .friendship-card .card-content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 16px;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+        color: #fff;
+        z-index: 1;
+      }
+
+      .comment-text {
+        font-size: 14px;
+        line-height: 1.5;
+        margin-bottom: 8px;
+      }
+
+      .comment-author {
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.8);
+        font-style: italic;
       }
 
       /* 公司简介区域 */
@@ -925,22 +961,48 @@
 
     <!-- 评论展示区域 -->
     <section class="friendship-section">
-      <h2 class="friendship-title">评论展示</h2>
+      <h2 class="friendship-title">客户好评</h2>
       <div class="friendship-cards">
         <div class="friendship-card">
           <img src="img/评论/评论.jpg" alt="评论1" class="card-image" />
+          <div class="card-content">
+            <p class="comment-text">
+              产品质量非常好，发货速度快，客服态度也很专业！
+            </p>
+            <p class="comment-author">— 张先生</p>
+          </div>
         </div>
         <div class="friendship-card">
           <img src="img/评论/评论1.jpg" alt="评论2" class="card-image" />
+          <div class="card-content">
+            <p class="comment-text">
+              多肽产品纯度高，实验效果显著，值得信赖的供应商。
+            </p>
+            <p class="comment-author">— 李博士</p>
+          </div>
         </div>
         <div class="friendship-card">
           <img src="img/评论/评论2.jpg" alt="评论3" class="card-image" />
+          <div class="card-content">
+            <p class="comment-text">
+              定制服务很贴心，完全按照我们的需求生产，非常满意！
+            </p>
+            <p class="comment-author">— 王经理</p>
+          </div>
         </div>
         <div class="friendship-card">
           <img src="img/评论/评论.jpg" alt="评论4" class="card-image" />
+          <div class="card-content">
+            <p class="comment-text">
+              长期合作供应商，品质稳定，售后服务响应及时。
+            </p>
+            <p class="comment-author">— 陈主任</p>
+          </div>
         </div>
       </div>
-      <p class="friendship-desc"></p>
+      <p class="friendship-desc">
+        感谢每一位客户的信任与支持，我们将持续为您提供高品质的多肽产品与服务。
+      </p>
     </section>
 
     <!-- 公司简介区域 -->
